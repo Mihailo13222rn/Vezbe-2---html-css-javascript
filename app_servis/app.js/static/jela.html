@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ponuda jela</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<main class="container">
+    <div class="row">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="indeks.html">Dashboard</a>
+            <a class="navbar-brand active" href="jela.html">Ponuda</a>
+            <a class="navbar-brand" href="narudzbine.html">Narudžbine</a>
+        </nav>
+    </div>
+    <h1>Ponuda jela</h1>
+    <a href="novo-jelo.html" class="btn btn-primary float-end">Novo jelo</a>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Kategorija</th>
+            <th>Jelo</th>
+            <th>Cena</th>
+            <th>Akcija</th>
+        </tr>
+        </thead>
+        <tbody id="spisak">
+        <!-- Dinamički popunjeni redovi će biti ovde -->
+        </tbody>
+    </table>
+</main>
+<script>
+    window.addEventListener("load", function () {
+        fetch("/jela")
+            .then((response) => {
+                return response.json();
+            })
+            .then((data) => {
+                let spisakTable = document.getElementById("spisak");
+
+                data.forEach((jelo) => {
+                    let newRow = spisakTable.insertRow();
+                    let kategorijaCell = newRow.insertCell(0);
+                    let jeloCell = newRow.insertCell(1);
+                    let cenaCell = newRow.insertCell(2);
+                    let akcijaCell = newRow.insertCell(3);
+
+                    kategorijaCell.innerHTML = jelo.kategorija;
+                    jeloCell.innerHTML = jelo.naziv;
+                    cenaCell.innerHTML = jelo.cena;
+
+
+                    let promenaCeneButton = document.createElement("button");
+                    promenaCeneButton.className = "btn btn-primary";
+                    promenaCeneButton.textContent = "Promena cene";
+
+
+
+                    let izmeniLink = document.createElement("a");
+                    izmeniLink.className = "btn btn-primary";
+                    izmeniLink.textContent = "Izmeni";
+                    izmeniLink.href = "jelo.html?id=" + jelo.id;
+
+                    akcijaCell.appendChild(promenaCeneButton);
+                    akcijaCell.appendChild(izmeniLink);
+                });
+            })
+            .catch((error) => {
+                console.error("Greška prilikom dohvatanja podataka:", error);
+            });
+    });
+</script>
+</body>
+</html>

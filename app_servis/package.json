@@ -1,0 +1,23 @@
+{
+  "name": "app_servis",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RAF-SJ-23-24/checkpoint-1-igor-Mihailo13222rn.git"
+  },
+  "author": "Mihailo Vujovic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RAF-SJ-23-24/checkpoint-1-igor-Mihailo13222rn/issues"
+  },
+  "homepage": "https://github.com/RAF-SJ-23-24/checkpoint-1-igor-Mihailo13222rn#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "joi": "^17.11.0"
+  }
+}

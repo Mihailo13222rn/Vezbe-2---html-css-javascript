@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo jelo</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="js/Validacija.js"></script>
+
+
+</head>
+<body>
+<main class="container">
+    <div class="row">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="indeks.html">Dashboard</a>
+            <a class="navbar-brand" href="jela.html">Ponuda</a>
+            <a class="navbar-brand" href="narudzbine.html">Narudžbine</a>
+        </nav>
+    </div>
+    <h1>Dodaj novo jelo</h1>
+    <form method="post" action="/novo-jelo" onsubmit="return validacija(event)">
+
+
+
+
+    <div class="mb-3">
+            <label for="naziv" class="form-label">Naziv:</label>
+        <input type="text" class="form-control" id="naziv" name="naziv" required onkeypress="this.classList.remove('success'); this.classList.remove('error')">
+
+    </div>
+        <div class="mb-3">
+            <label for="opis" class="form-label">Opis:</label>
+            <textarea id="opis" name="opis" class="form-control"></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="kategorija" class="form-label">Kategorija:</label>
+            <select class="form-select" name="kategorija" id="kategorija">
+                <option value="1">Pizza</option>
+                <option value="2">Sendvič</option>
+            </select>
+        </div>
+        <div class="row mb-3">
+            <div class="col-6">
+                <label for="cena" class="form-label">Cena:</label>
+                <input type="number" min="0" step="1" required id="cena" name="cena" class="form-control">
+            </div>
+            <div class="col-6">
+
+            </div>
+        </div>
+        <button class="btn btn-primary">Unesi</button>
+    </form>
+    <a href="jela.html" class="btn btn-link mt-3 mb-5">Nazad</a>
+</main>
+</body>
+</html>
+

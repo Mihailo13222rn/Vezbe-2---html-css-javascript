@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pojedinačna narudžbina</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+</head>
+<body>
+<main class="container">
+    <h1>Detalji narudžbine</h1>
+    <form method="post" action="http://postman-echo.com/post" id="forma">
+        <dl class="row">
+            <dt class="col-sm-3">Zakazano vreme</dt>
+            <dd class="col-sm-9">5.10.2023 16:15</dd>
+
+            <dt class="col-sm-3">Sadržaj narudžbine</dt>
+            <dd class="col-sm-9">
+                <ul id="sadrzaj">
+                    <li>Pizza Kaprićoza-velika 1x</li>
+                    <li>Pizza Kaprićoza-mala 1x</li>
+                    <li>Sendvić Prezident x1</li>
+                </ul>
+            </dd>
+
+            <dt class="col-sm-3">Status</dt>
+            <dd class="col-sm-9">
+                <select id="status" name="status" onchange="document.getElementById('forma').submit()">
+                    <option value="novo">Novo</option>
+                    <option value="prihvaceno">Prihvaćeno</option>
+                    <option value="odbijeno">Odbijeno</option>
+                    <option value="upripremi">U pripremi</option>
+                    <option value="udostavi">U dostavi</option>
+                    <option value="zavrseno">Završeno</option>
+                </select>
+            </dd>
+        </dl>
+        <!-- Dodajte ostale elemente prema potrebi -->
+    </form>
+</main>
+</body>
+</html>

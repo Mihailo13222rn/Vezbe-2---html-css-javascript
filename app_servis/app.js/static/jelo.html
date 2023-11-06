@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalji jela</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="js/jelo.js"></script>
+</head>
+<body>
+<main class="container">
+    <div class="row">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="indeks.html">Dashboard</a>
+            <a class="navbar-brand" href="jela.html">Ponuda</a>
+            <a class="navbar-brand" href="narudzbine.html">Narudžbine</a>
+        </nav>
+    </div>
+    <h1>Detalji jela</h1>
+    <form method="post" action="http://postman-echo.com/post" id="forma">
+        <div class="mb-3">
+            <label for="naziv" class="form-label">Naziv:</label>
+            <input type="text" class="form-control" id="naziv" name="naziv" required>
+        </div>
+        <div class="mb-3">
+            <label for="opis" class="form-label">Opis:</label>
+            <textarea id="opis" name="opis" class="form-control"></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="kategorija" class="form-label">Kategorija:</label>
+            <select class="form-select" name="kategorija" id="kategorija">
+                <option value="1">Pizza</option>
+                <option value="2">Sendvič</option>
+            </select>
+        </div>
+        <div class="row mb-3">
+            <div class="col-6">
+                <label for="cena" class="form-label">Cena:</label>
+                <input type="number" min="0" step="1" required id="cena" name="cena" class="form-control">
+            </div>
+            <div class="col-6">
+                <!-- Opciono dodatno polje za cenu -->
+            </div>
+        </div>
+        <div>
+            <label for="naziv">Sastojci:</label>
+            <div class="input-group mb-3">
+                <select class="form-select" id="spisak-sastojaka">
+                    <option></option>
+                    <option value="1">Šunka</option>
+                    <option value="2">Kačkavalj</option>
+                    <option value="3">Kečap</option>
+                    <option value="4">Parizer</option>
+                    <option value="5">Majonez</option>
+                </select>
+                <button class="btn btn-success" type="button" id="dodaj-sastojak">+</button>
+            </div>
+            <div id="sastojci">
+                <!-- Izabrani sastojci će se dodavati ovde -->
+            </div>
+        </div>
+        <button class="btn btn-primary">Sačuvaj</button>
+        <a href="#" class="btn btn-danger">Obriši</a>
+    </form>
+</main>
+</body>
+</html>
+

@@ -1,0 +1,7 @@
+{"naziv":"Fungi","opis":"Neka bude u somunu","kategorija":"2","cena":"1500"}
+{"naziv":"Margarita","opis":"Neka testo bude malo zivlje","kategorija":"1","cena":"2000"}
+{"naziv":"Capricozza","opis":"Zelim da testo mude resije","kategorija":"1","cena":"3150"}
+{"naziv":"Srpski","opis":"Molba je da se jelo sto vise zacini.","kategorija":"2","cena":"1000"}
+{"naziv":"Vezuvio","opis":"Zelim da pizza bude bude slabo pecena","kategorija":"1","cena":"1500"}
+{"naziv":"Pizza Quattro Formaggi","opis":"Zelim da pizza ima sto vise sira u sebi...","kategorija":"1","cena":"2000"}
+{"naziv":"Italijanski sendvic","opis":"Neka hleb bude res prepecen.","kategorija":"2","cena":"1000"}
